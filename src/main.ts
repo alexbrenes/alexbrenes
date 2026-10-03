@@ -24,11 +24,14 @@ class App {
         const camera = new ArcRotateCamera("camera", Math.PI / 2, Math.PI, 200, Vector3.Zero(), scene);
         camera.attachControl(canvas, true);
 
+        // BASE_URL is "/" in dev and "/alexbrenes/" in the Pages build, so the
+        // texture URL stays correct whether served from root or a project subpath.
+        const base = import.meta.env.BASE_URL;
         const T: Mesh = new Tetrahedron(50, [0, 0, 0], [
-            "/image.png", // base
-            "/image.png", // side
-            "/image.png", // side
-            "/image.png", // side
+            `${base}image.png`, // base
+            `${base}image.png`, // side
+            `${base}image.png`, // side
+            `${base}image.png`, // side
         ]).getMesh("tetrahedron", scene);
 
         window.addEventListener("keydown", (ev) => {
