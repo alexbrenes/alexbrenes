@@ -1,0 +1,22 @@
+{
+  "name": "alexbrenes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^9.28.0",
+    "@babylonjs/inspector": "^9.28.0",
+    "@babylonjs/loaders": "^9.28.0",
+    "earcut": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/earcut": "^3.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^6"
+  }
+}
